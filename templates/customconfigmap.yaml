@@ -1,0 +1,21 @@
+apiVersion: config.example.com/v1
+kind: CustomConfigMap
+metadata:
+  name: {{ .Values.customConfigMap.name | default (include "argo-tests.fullname" .) }}
+  {{- with .Values.namespace }}
+  namespace: {{ . }}
+  {{- end }}
+  labels:
+    {{- include "argo-tests.labels" . | nindent 4 }}
+    {{- with .Values.metadata.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- with .Values.metadata.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- with .Values.customConfigMap.data }}
+  data:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}

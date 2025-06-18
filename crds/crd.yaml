@@ -15,6 +15,12 @@ spec:
       openAPIV3Schema:
         type: object
         properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
           spec:
             type: object
             properties:
@@ -23,17 +29,6 @@ spec:
                 additionalProperties:
                   type: string
                 description: "Key-value pairs of configuration data"
-              binaryData:
-                type: object
-                additionalProperties:
-                  type: string
-                  format: byte
-                description: "Binary data encoded in base64"
-              immutable:
-                type: boolean
-                default: false
-                description: "If set to true, ensures that data stored in the CustomConfigMap cannot be updated"
-            description: "CustomConfigMap specification"
           status:
             type: object
             properties:
@@ -55,10 +50,6 @@ spec:
         required:
         - spec
     additionalPrinterColumns:
-    - name: Data Keys
-      type: string
-      description: "Number of data keys"
-      jsonPath: ".spec.data"
     - name: Age
       type: date
       jsonPath: ".metadata.creationTimestamp"
