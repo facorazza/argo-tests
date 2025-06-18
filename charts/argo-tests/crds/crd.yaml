@@ -29,6 +29,11 @@ spec:
                 additionalProperties:
                   type: string
                 description: "Key-value pairs of configuration data"
+              binaryData:
+                type: object
+                additionalProperties:
+                  type: string
+                description: "Key-value pairs of configuration data"
           status:
             type: object
             properties:
