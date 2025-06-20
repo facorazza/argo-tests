@@ -3,6 +3,16 @@ entries:
   argo-tests:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-06-20T10:31:02.277598595Z"
+    description: A Helm chart for CustomConfigMap CRD
+    digest: c6a21b28deb11c50c035d709da269d8dd8dc5470899d4725abd96ce1e52ab5aa
+    name: argo-tests
+    type: application
+    urls:
+    - https://github.com/facorazza/argo-tests/releases/download/argo-tests-0.3.0/argo-tests-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-06-18T09:10:47.216552672Z"
     description: A Helm chart for CustomConfigMap CRD
     digest: ca910368b0f94e8aa54029c11fd19cfba8f7484492b1d388ae8cb2c2479fa7e6
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/facorazza/argo-tests/releases/download/argo-tests-0.1.0/argo-tests-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-18T09:10:47.216561819Z"
+generated: "2025-06-20T10:31:02.277614385Z"
